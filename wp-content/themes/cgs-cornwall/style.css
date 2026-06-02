@@ -1,0 +1,119 @@
+/*
+Theme Name: CGS Cornwall
+Theme URI: https://theideacrowd.co.uk
+Author: The Idea Crowd
+Description: The custom theme of CGS Cornwall offical website.
+Requires at least: 6.7
+Tested up to: 6.9
+Requires PHP: 7.2
+Version: 1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: cgs-cornwall
+*/
+
+html {
+  height: 100%;
+  background-color: #2d6099;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "system-ui" !important;
+}
+
+header nav.fixed-top {
+  position: relative;
+  border-bottom: 3px solid rgba(46, 96, 153, 0.2);
+}
+
+header nav.fixed-top::after {
+  content: "";
+  position: absolute;
+  bottom: -3px; /* Matches the thickness of the border */
+  left: 0;
+  height: 3px; /* Matches the thickness of the border */
+  background-color: #2e6099; /* Your brand color */
+
+  /* Animation logic */
+  width: 0;
+  animation: loadIn 1.5s ease-out forwards;
+}
+
+@keyframes loadIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  #navMenu {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+nav #menu-header-menu li a {
+  color: #333;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  nav #menu-header-menu li a {
+    display: block;
+    padding: 15px;
+    font-size: 22px;
+    color: #2d6099;
+    font-family: "Montserrat", Sans-serif;
+  }
+}
+
+.header-contact {
+  background-color: #2d6099;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+.header-contact:hover {
+  background-color: #327eb7;
+  color: #fff;
+}
+
+#form_contact-form .frm_button_submit {
+  background-color: #2d6099;
+  border: 0;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+#form_contact-form .frm_button_submit:hover {
+  background-color: #327eb7;
+}
+
+footer {
+  background-color: #2d6099;
+  color: #fff;
+  font-family: "system-ui" !important;
+  padding: 50px 10px;
+  margin: 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
