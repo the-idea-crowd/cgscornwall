@@ -662,6 +662,10 @@
                     >
                   </p>
 
+                  <div id="thankyou-notice" style="display:none; padding:12px; background:#e6ffed; border:1px solid #34d058; border-radius:6px; margin-bottom:16px;">
+                    Thank you — your message has been sent!
+                  </div>
+
                   <form id="form_contact-form" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="42df490a-d129-40a6-ba9e-eb5c49e9011e">
                     <div class="row">
@@ -1157,6 +1161,11 @@
         //# sourceURL=/wp-includes/js/wp-emoji-loader.min.js
       </script>
     </div>
+    <script>
+      if (new URLSearchParams(window.location.search).has('thankyou')) {
+        document.getElementById('thankyou-notice').style.display = 'block';
+      }
+    </script>
   </body>
 </html>
 <!-- Powered by Staatic (https://staatic.com/) -->
